@@ -63,8 +63,15 @@ nav.links a:hover::after{width:100%}
 .p-home nav.links a[href="index.html"],.p-services nav.links a[href="services.html"],.p-about nav.links a[href="about.html"],.p-careers nav.links a[href="careers.html"],.p-contact nav.links a[href="contact.html"]{color:var(--teal-deep)}
 .p-home nav.links a[href="index.html"]::after,.p-services nav.links a[href="services.html"]::after,.p-about nav.links a[href="about.html"]::after,.p-careers nav.links a[href="careers.html"]::after,.p-contact nav.links a[href="contact.html"]::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:14px}
-.menu-btn{display:none;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
-.menu-btn svg{width:28px;height:28px}
+.menu-btn{display:none;position:relative;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
+.menu-btn svg{width:28px;height:28px;transition:opacity .2s}
+.nav-overlay{position:fixed;inset:0;background:rgba(12,74,86,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
+.nav-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
+body.menu-open{overflow:hidden}
+body.menu-open .menu-btn>svg{opacity:0}
+body.menu-open .menu-btn::before,body.menu-open .menu-btn::after{content:"";position:absolute;left:50%;top:50%;width:24px;height:2.5px;background:#fff;border-radius:2px}
+body.menu-open .menu-btn::before{transform:translate(-50%,-50%) rotate(45deg)}
+body.menu-open .menu-btn::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .hero{position:relative;padding:72px 0 90px;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 70% at 88% 8%,rgba(43,179,192,.16),transparent 60%),radial-gradient(55% 60% at 6% 95%,rgba(224,160,88,.16),transparent 60%),var(--paper)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
@@ -177,11 +184,12 @@ section{padding:96px 0}
 .contact{background:var(--sand)}
 .contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
 .contact-info .line{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-info .line>div{min-width:0;flex:1}
 .contact-info .line:last-child{border-bottom:0}
 .contact-info .ic{width:48px;height:48px;border-radius:12px;background:#fff;color:var(--teal);display:grid;place-items:center;flex:none;box-shadow:var(--shadow-sm)}
 .contact-info .ic svg{width:24px;height:24px}
 .contact-info .label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--teal);margin-bottom:2px}
-.contact-info .val-txt{font-size:1.12rem;font-weight:700;color:var(--ink)}
+.contact-info .val-txt{font-size:1.12rem;font-weight:700;color:var(--ink);overflow-wrap:anywhere}
 .contact-info .val-txt a:hover{color:var(--teal)}
 .contact-info .sub{font-size:.92rem;color:var(--ink-soft);font-weight:600}
 .form{background:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--shadow-md);border:1px solid var(--line)}
@@ -203,6 +211,7 @@ footer.site .brand small{color:var(--teal-bright)}
 footer.site p.about{margin-top:16px;max-width:32em;color:#9fb6bb;line-height:1.7}
 footer.site h4{font-family:var(--body);font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
 footer.site ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer.site ul a{overflow-wrap:anywhere}
 footer.site ul a:hover{color:var(--amber)}
 footer.site .social{display:flex;gap:12px;margin-top:18px}
 footer.site .social a{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,transform .25s}
@@ -231,13 +240,17 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  .stats{grid-template-columns:repeat(2,1fr)}
  footer.site .top{grid-template-columns:1fr 1fr}
 }
-@media(max-width:720px){
- body{font-size:17px}
- nav.links{position:fixed;inset:0 0 0 auto;width:min(300px,82vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60}
+@media(max-width:900px){
+ nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#0a3c46);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
  nav.links.open{transform:none}
- nav.links a{font-size:1.1rem;padding:10px 0;width:100%;border-bottom:1px solid var(--line)}
+ nav.links a{font-size:1.1rem;font-weight:700;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.14);color:#fff}
+ nav.links a:hover{color:var(--amber)}
+ .p-home nav.links a[href="index.html"],.p-services nav.links a[href="services.html"],.p-about nav.links a[href="about.html"],.p-careers nav.links a[href="careers.html"],.p-contact nav.links a[href="contact.html"]{color:var(--amber)}
  .menu-btn{display:inline-flex;z-index:70}
  .nav-cta .btn-text{display:none}
+}
+@media(max-width:720px){
+ body{font-size:17px}
  .svc-grid,.roles{grid-template-columns:1fr}
  .util .hide-sm{display:none}
  .row2{grid-template-columns:1fr}
@@ -277,6 +290,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
     </div>
   </div>
 </header>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 <main>
 <section class="page-hero">
   <div class="wrap reveal">
@@ -362,9 +376,13 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
   const nav=document.getElementById('nav');
   const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>12);
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-  const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');
-  menuBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);});
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menuBtn.setAttribute('aria-expanded',false);}));
+  const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links'),overlay=document.getElementById('navOverlay');
+  const setMenu=(open)=>{links.classList.toggle('open',open);overlay.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);menuBtn.setAttribute('aria-expanded',open);};
+  menuBtn.addEventListener('click',()=>setMenu(!links.classList.contains('open')));
+  overlay.addEventListener('click',()=>setMenu(false));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
+  window.addEventListener('resize',()=>{if(window.innerWidth>900)setMenu(false);});
   const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   const btn=document.getElementById('submitBtn');

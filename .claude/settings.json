@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 /tmp/fix_responsive.py)",
+      "Bash(python3 /tmp/fix_drawer_color.py)",
+      "Bash(python3 /tmp/fix_drawer2.py)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(command -v node)",
+      "Bash(node /tmp/shot.js)",
+      "Bash(node /tmp/sweep.js)",
+      "Bash(node /tmp/test_clip.js)",
+      "Bash(node /tmp/test_scroll.js)",
+      "Bash(python3 /tmp/fix_email_wrap.py)"
+    ]
+  }
+}
