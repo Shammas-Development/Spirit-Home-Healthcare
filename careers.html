@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Careers | Spirit Home Health Care</title>
+<meta name="description" content="Join Spirit Home Health Care. We are hiring RNs, aides, therapists, and social workers across Metro Detroit. Apply today." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal-deep:#0C4A56;--teal:#15808F;--teal-bright:#2BB3C0;
+  --sand:#F5F1E9;--paper:#FBFAF7;--amber:#E0A458;--amber-deep:#C9863A;
+  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(12,74,86,.12);
+  --shadow-sm:0 2px 10px rgba(12,74,86,.08);--shadow-md:0 18px 50px -20px rgba(12,74,86,.35);
+  --shadow-lg:0 40px 80px -30px rgba(12,74,86,.45);--r:18px;--maxw:1180px;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--body);font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--body);font-weight:700;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;will-change:transform}
+.btn svg{width:1.05em;height:1.05em}
+.btn-primary{background:var(--teal-deep);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#0a3c46}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(224,160,88,.7);background:var(--amber-deep);color:#fff}
+.btn-ghost{background:transparent;color:var(--teal-deep);border-color:var(--line)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--teal);background:#fff;box-shadow:var(--shadow-sm)}
+.btn-white{background:#fff;color:var(--teal-deep)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.util{background:var(--teal-deep);color:#dff1f3;font-size:.86rem}
+.util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:42px;flex-wrap:wrap}
+.util a{display:inline-flex;align-items:center;gap:.4em;font-weight:600;color:#fff}
+.util a:hover{color:var(--amber)}
+.util .review{color:var(--amber);font-weight:800}
+.util .review:hover{color:#fff}
+.util .pill{display:inline-flex;align-items:center;gap:.5em}
+.util .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pulse 2.4s infinite}
+.util .right{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,160,88,.6)}70%{box-shadow:0 0 0 9px rgba(224,160,88,0)}100%{box-shadow:0 0 0 0 rgba(224,160,88,0)}}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+header.nav.scrolled{box-shadow:var(--shadow-sm);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px;transition:min-height .3s}
+header.nav.scrolled .wrap{min-height:64px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:1.32rem;color:var(--teal-deep);letter-spacing:-.02em}
+.brand .mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(140deg,var(--teal),var(--teal-deep));display:grid;place-items:center;color:#fff;flex:none;box-shadow:var(--shadow-sm)}
+.brand .mark svg{width:24px;height:24px}
+.brand small{display:block;font-family:var(--body);font-weight:600;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-top:-2px}
+nav.links{display:flex;align-items:center;gap:30px}
+nav.links a{font-weight:600;font-size:.98rem;color:var(--ink-soft);position:relative;padding:4px 0}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--teal);transition:width .28s ease}
+nav.links a:hover{color:var(--teal-deep)}
+nav.links a:hover::after{width:100%}
+.p-home nav.links a[href="index.html"],.p-services nav.links a[href="services.html"],.p-about nav.links a[href="about.html"],.p-careers nav.links a[href="careers.html"],.p-contact nav.links a[href="contact.html"]{color:var(--teal-deep)}
+.p-home nav.links a[href="index.html"]::after,.p-services nav.links a[href="services.html"]::after,.p-about nav.links a[href="about.html"]::after,.p-careers nav.links a[href="careers.html"]::after,.p-contact nav.links a[href="contact.html"]::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
+.menu-btn svg{width:28px;height:28px}
+.hero{position:relative;padding:72px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 70% at 88% 8%,rgba(43,179,192,.16),transparent 60%),radial-gradient(55% 60% at 6% 95%,rgba(224,160,88,.16),transparent 60%),var(--paper)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.hero-copy{max-width:560px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.15rem);color:var(--ink);margin:.5em 0 .42em}
+.hero h1 .ital{font-style:italic;color:var(--teal-deep)}
+.hero p.lede{font-size:1.18rem;color:var(--ink-soft);max-width:30em}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:.5em;background:#fff;border:1px solid var(--line);border-radius:100px;padding:.5em 1em;font-size:.85rem;font-weight:700;color:var(--teal-deep);box-shadow:var(--shadow-sm)}
+.chip svg{width:1.1em;height:1.1em;color:var(--teal)}
+.hero-media{position:relative}
+.arch{position:relative;border-radius:240px 240px 28px 28px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/4.6;background:var(--teal-deep);border:10px solid #fff}
+.arch svg{width:100%;height:100%;display:block}
+.hero-media .badge{position:absolute;right:-10px;bottom:34px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:14px;max-width:230px}
+.hero-media .badge .ic{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;color:var(--teal);flex:none}
+.hero-media .badge .ic svg{width:24px;height:24px}
+.hero-media .badge b{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink);display:block;line-height:1.2}
+.hero-media .badge span{font-size:.78rem;color:var(--ink-soft);font-weight:600}
+.hero-media .leaf{position:absolute;left:-26px;top:40px;width:84px;height:84px;border-radius:24px;background:linear-gradient(140deg,var(--amber),var(--amber-deep));opacity:.9;z-index:-1;transform:rotate(8deg)}
+.page-hero{position:relative;padding:60px 0 52px;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 92% 0%,rgba(43,179,192,.14),transparent 60%),radial-gradient(50% 80% at 0% 100%,rgba(224,160,88,.14),transparent 60%),var(--paper)}
+.page-hero .crumb{font-weight:700;font-size:.8rem;color:var(--teal);letter-spacing:.04em}
+.page-hero .crumb a{color:var(--ink-soft)}
+.page-hero .crumb a:hover{color:var(--teal)}
+.page-hero h1{font-size:clamp(2.3rem,5vw,3.5rem);color:var(--ink);margin:.3em 0 .35em}
+.page-hero p{font-size:1.15rem;color:var(--ink-soft);max-width:46em}
+.trust{background:var(--teal-deep);color:#cfe7ea;padding:30px 0}
+.trust .wrap{display:flex;align-items:center;justify-content:center;gap:16px 40px;flex-wrap:wrap}
+.trust .label{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.6)}
+.seal{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.97);color:var(--teal-deep);border-radius:100px;padding:.6em 1.15em;font-weight:800;font-size:.9rem}
+.seal svg{width:26px;height:26px;color:var(--teal);flex:none}
+.seal small{display:block;font-weight:600;font-size:.66rem;color:var(--ink-soft);letter-spacing:.02em}
+section{padding:96px 0}
+.sec-head{max-width:660px;margin-bottom:54px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--ink);margin:.35em 0 .4em}
+.sec-head p{color:var(--ink-soft);font-size:1.1rem}
+.mission{background:var(--sand)}
+.mission .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
+.mission .figure{position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;aspect-ratio:1/1.15;border:8px solid #fff;box-shadow:var(--shadow-md);background:var(--sand)}
+.mission .figure svg{width:100%;height:100%;display:block}
+.mission blockquote{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.3;color:var(--teal-deep);font-weight:500}
+.mission blockquote .ital{font-style:italic}
+.mission .who{margin-top:22px;font-weight:700;color:var(--ink)}
+.mission .who span{display:block;font-weight:600;color:var(--ink-soft);font-size:.92rem}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+.card .ph{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--sand)}
+.card .ph svg{width:100%;height:100%;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.card:hover .ph svg{transform:scale(1.06)}
+.card .tag{position:absolute;left:14px;top:14px;z-index:1;background:rgba(255,255,255,.94);color:var(--teal-deep);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.4em .8em;border-radius:100px;box-shadow:var(--shadow-sm)}
+.card .body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.32rem;color:var(--ink)}
+.card p{font-size:.98rem;color:var(--ink-soft);flex:1}
+.card .more{display:inline-flex;align-items:center;gap:.4em;font-weight:700;font-size:.92rem;color:var(--teal);margin-top:4px}
+.card .more svg{width:1em;height:1em;transition:transform .25s}
+.card:hover .more svg{transform:translateX(4px)}
+.steps{background:linear-gradient(180deg,var(--paper),var(--sand))}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step{background:#fff;border-radius:var(--r);padding:36px 30px;border:1px solid var(--line);position:relative;box-shadow:var(--shadow-sm)}
+.step .num{font-family:var(--display);font-size:3rem;color:var(--amber);font-weight:600;line-height:1}
+.step h3{font-size:1.3rem;margin:.4em 0 .35em;color:var(--ink)}
+.step p{color:var(--ink-soft);font-size:1rem}
+.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.val{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.val:first-of-type{border-top:0}
+.val .ic{width:52px;height:52px;border-radius:14px;background:var(--sand);color:var(--teal);display:grid;place-items:center;flex:none}
+.val .ic svg{width:26px;height:26px}
+.val h3{font-size:1.18rem;margin-bottom:4px;color:var(--ink)}
+.val p{color:var(--ink-soft);font-size:.98rem}
+.why-media{position:relative;border-radius:24px 24px 200px 200px;overflow:hidden;aspect-ratio:1/1.2;border:8px solid #fff;box-shadow:var(--shadow-md);background:var(--teal-deep)}
+.why-media svg{width:100%;height:100%;display:block}
+.svc-row{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:46px 0;border-bottom:1px solid var(--line)}
+.svc-row:last-of-type{border-bottom:0}
+.svc-row .svc-art{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:16/12;background:var(--sand)}
+.svc-row.flip .svc-art{order:2}
+.svc-art svg{width:100%;height:100%;display:block}
+.svc-row .tagx{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.svc-row h2{font-size:clamp(1.6rem,3vw,2.05rem);color:var(--ink);margin-bottom:.4em}
+.svc-row p{color:var(--ink-soft)}
+.svc-row ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.svc-row li{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:var(--ink);font-size:.98rem}
+.svc-row li svg{width:20px;height:20px;color:var(--teal);flex:none;margin-top:2px}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.role{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow-sm);transition:transform .35s,box-shadow .35s}
+.role:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.role .ic{width:50px;height:50px;border-radius:13px;background:var(--sand);color:var(--teal);display:grid;place-items:center;margin-bottom:14px}
+.role .ic svg{width:26px;height:26px}
+.role h3{font-size:1.2rem;color:var(--ink);margin-bottom:6px}
+.role p{font-size:.95rem;color:var(--ink-soft)}
+.role .type{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-deep);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:center;box-shadow:var(--shadow-sm)}
+.stat b{font-family:var(--display);font-size:2.4rem;color:var(--teal-deep);display:block;line-height:1}
+.stat span{font-weight:700;font-size:.9rem;color:var(--ink-soft);margin-top:6px;display:block}
+.careers-band{background:var(--teal-deep);color:#eaf6f7;position:relative;overflow:hidden}
+.careers-band::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 20%,rgba(43,179,192,.3),transparent 60%),radial-gradient(40% 70% at 10% 90%,rgba(224,160,88,.22),transparent 60%)}
+.careers-band .wrap{position:relative;display:grid;grid-template-columns:1.4fr .9fr;gap:40px;align-items:center}
+.careers-band h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem)}
+.careers-band p{color:#cfe7ea;font-size:1.12rem;margin-top:.6em;max-width:34em}
+.careers-band .cta-side{display:flex;justify-content:flex-end}
+.cta-band{background:linear-gradient(150deg,var(--teal-deep),var(--teal));color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 85% 15%,rgba(43,179,192,.35),transparent 60%),radial-gradient(40% 70% at 12% 90%,rgba(224,160,88,.25),transparent 60%)}
+.cta-band .wrap{position:relative}
+.cta-band h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:.4em}
+.cta-band p{color:#d8eef0;font-size:1.12rem;max-width:40em;margin:0 auto 1.4em}
+.cta-band .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact{background:var(--sand)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
+.contact-info .line{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-info .line:last-child{border-bottom:0}
+.contact-info .ic{width:48px;height:48px;border-radius:12px;background:#fff;color:var(--teal);display:grid;place-items:center;flex:none;box-shadow:var(--shadow-sm)}
+.contact-info .ic svg{width:24px;height:24px}
+.contact-info .label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--teal);margin-bottom:2px}
+.contact-info .val-txt{font-size:1.12rem;font-weight:700;color:var(--ink)}
+.contact-info .val-txt a:hover{color:var(--teal)}
+.contact-info .sub{font-size:.92rem;color:var(--ink-soft);font-weight:600}
+.form{background:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--shadow-md);border:1px solid var(--line)}
+.form h3{font-size:1.55rem;color:var(--ink);margin-bottom:6px}
+.form>p{color:var(--ink-soft);font-size:.98rem;margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:.86rem;color:var(--ink);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);padding:.85em 1em;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(21,128,143,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form .btn-amber{width:100%;justify-content:center;margin-top:6px}
+.form .note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:12px}
+.map-embed{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line);aspect-ratio:16/9;background:var(--sand);margin-top:40px}
+.map-embed iframe{width:100%;height:100%;border:0;display:block}
+footer.site{background:var(--ink);color:#bcd0d4;padding:64px 0 30px;font-size:.95rem}
+footer.site .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer.site .brand{color:#fff}
+footer.site .brand small{color:var(--teal-bright)}
+footer.site p.about{margin-top:16px;max-width:32em;color:#9fb6bb;line-height:1.7}
+footer.site h4{font-family:var(--body);font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+footer.site ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer.site ul a:hover{color:var(--amber)}
+footer.site .social{display:flex;gap:12px;margin-top:18px}
+footer.site .social a{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,transform .25s}
+footer.site .social a:hover{background:var(--teal);transform:translateY(-3px)}
+footer.site .social svg{width:18px;height:18px;color:#fff}
+footer.site .notice{font-size:.78rem;color:#7e979c;line-height:1.7;margin-top:28px;max-width:75ch}
+footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px;font-size:.82rem;color:#7e979c}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+[data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}
+[data-delay="3"]{transition-delay:.24s}[data-delay="4"]{transition-delay:.32s}[data-delay="5"]{transition-delay:.4s}
+.load{opacity:0;transform:translateY(20px);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.load.d1{animation-delay:.1s}.load.d2{animation-delay:.24s}.load.d3{animation-delay:.38s}.load.d4{animation-delay:.52s}.load.d5{animation-delay:.66s}
+@keyframes rise{to{opacity:1;transform:none}}
+.arch{animation:archIn 1.1s cubic-bezier(.2,.8,.2,1) .3s both}
+@keyframes archIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(max-width:980px){
+ .hero .wrap{grid-template-columns:1fr;gap:42px}
+ .hero-media{max-width:460px;margin:0 auto}
+ .mission .wrap,.why .wrap,.contact .wrap,.careers-band .wrap{grid-template-columns:1fr;gap:38px}
+ .careers-band .cta-side{justify-content:flex-start}
+ .svc-grid,.roles{grid-template-columns:repeat(2,1fr)}
+ .step-grid{grid-template-columns:1fr}
+ .svc-row{grid-template-columns:1fr;gap:30px}
+ .svc-row.flip .svc-art{order:0}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ footer.site .top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+ body{font-size:17px}
+ nav.links{position:fixed;inset:0 0 0 auto;width:min(300px,82vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60}
+ nav.links.open{transform:none}
+ nav.links a{font-size:1.1rem;padding:10px 0;width:100%;border-bottom:1px solid var(--line)}
+ .menu-btn{display:inline-flex;z-index:70}
+ .nav-cta .btn-text{display:none}
+ .svc-grid,.roles{grid-template-columns:1fr}
+ .util .hide-sm{display:none}
+ .row2{grid-template-columns:1fr}
+ footer.site .top{grid-template-columns:1fr}
+ section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .reveal{opacity:1;transform:none}.load{opacity:1;transform:none}
+}
+
+</style>
+</head>
+<body class="p-careers">
+<div class="util">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span><strong>Now accepting new Medicare patients</strong></span>
+    <span class="right">
+      <a class="review" href="https://maps.app.goo.gl/78KayNpbwFcHHtH17" target="_blank" rel="noopener" aria-label="Leave us a Google review"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>Leave a review</a>
+      <a class="hide-sm" href="mailto:Intake@SpiritHomeHealthCare.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Intake@SpiritHomeHealthCare.com</a>
+      <a href="tel:+12489969202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>248-996-9202</a>
+    </span>
+  </div>
+</div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9.5 12.5a2.5 2.5 0 0 1 5 0c0 1.7-2.5 3.5-2.5 3.5s-2.5-1.8-2.5-3.5z" fill="currentColor" stroke="none"/></svg></span>
+      <span>Spirit Home Health Care<small>Southfield &middot; Metro Detroit</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="tel:+12489969202"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="btn-text">Call now</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="wrap reveal">
+    <p class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Careers</p>
+    <h1>Join a team that cares for its caregivers</h1>
+    <p>We are hiring. If you want to do meaningful work with people who support you, supply you with training and resources, and treat patients like family, we would love to meet you.</p>
+    <div style="margin-top:26px"><a class="btn btn-amber" href="mailto:Intake@SpiritHomeHealthCare.com?subject=Careers%20at%20Spirit%20Home%20Health%20Care">Apply by email</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center reveal"><p class="eyebrow">Open roles</p><h2>Where you fit in</h2><p>We are always looking for compassionate, qualified professionals across our care team.</p></div>
+    <div class="roles">
+      <div class="role reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><h3>Registered Nurse (RN)</h3><p>Lead clinical care in patients' homes, from assessments to wound care and medication management.</p><div class="type">Full-time &middot; Part-time</div></div>
+      <div class="role reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>Home Health Aide / CNA</h3><p>Provide personal care, support transfers and exercises, and help patients live comfortably at home.</p><div class="type">Full-time &middot; Part-time</div></div>
+      <div class="role reveal" data-delay="2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="6" r="3"/><path d="M12 9v7M12 12l-6 4M12 12l6 4"/></svg></span><h3>Physical Therapist (PT)</h3><p>Help patients rebuild mobility, balance, and strength with personalized in-home therapy.</p><div class="type">Per visit &middot; Part-time</div></div>
+      <div class="role reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s1.5 2 4 2 4-2 4-2"/><rect x="4" y="4" width="16" height="16" rx="4"/></svg></span><h3>Occupational Therapist (OT)</h3><p>Restore daily living skills and adapt home environments for safe, confident recovery.</p><div class="type">Per visit &middot; Part-time</div></div>
+      <div class="role reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8a18 18 0 0 0 0 8M20 8a18 18 0 0 1 0 8M9 6v12M15 6v12"/></svg></span><h3>Speech Therapist (SLP)</h3><p>Support communication, swallowing, and expression through targeted, compassionate therapy.</p><div class="type">Per visit &middot; Part-time</div></div>
+      <div class="role reveal" data-delay="2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7 0"/></svg></span><h3>Social Worker (LMSW)</h3><p>Provide psychosocial assessments and connect patients and families with vital resources.</p><div class="type">Full-time &middot; Part-time</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Why work with us</p>
+      <h2 style="font-size:clamp(1.9rem,3.8vw,2.7rem);margin:.35em 0 1em">Supported, respected, set up to succeed</h2>
+      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Training and resources</h3><p>You get exceptional training, support, and the resources to deliver care you can be proud of.</p></div></div>
+      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible scheduling</h3><p>Full-time, part-time, and per-visit options that work around your life.</p></div></div>
+      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>Meaningful work</h3><p>Every visit helps someone stay safe, independent, and at home with dignity.</p></div></div>
+    </div>
+    <div class="why-media reveal" data-delay="1"><svg viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A home health aide standing beside a senior"><defs><linearGradient id="sand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EC"/><stop offset="1" stop-color="#EFE6D5"/></linearGradient></defs><rect width="400" height="460" fill="url(#sand2)"/><circle cx="200" cy="170" r="140" fill="#15808F" opacity=".10"/><path d="M0 372 H400 V460 H0 Z" fill="#E4D7BF"/><ellipse cx="200" cy="374" rx="180" ry="22" fill="#0C4A56" opacity=".08"/><rect x="96" y="244" width="78" height="130" rx="32" fill="#C9863A"/><circle cx="135" cy="206" r="30" fill="#E8BE97"/><path d="M105 200 a30 30 0 0 1 60 0 q-7 -18 -30 -18 q-23 0 -30 18 Z" fill="#BFC8CD"/><path d="M122 210 q4 5 8 0 M140 210 q4 5 8 0" stroke="#7C5E48" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M127 222 q8 6 16 0" stroke="#A8744F" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="226" y="232" width="80" height="142" rx="34" fill="#15808F"/><path d="M226 286 q-22 -22 -50 -16" stroke="#15808F" stroke-width="22" fill="none" stroke-linecap="round"/><circle cx="178" cy="272" r="12" fill="#F0C9A8"/><circle cx="266" cy="196" r="31" fill="#F0C9A8"/><path d="M235 194 a31 31 0 0 1 62 0 q-6 -22 -31 -22 q-25 0 -31 22 Z" fill="#3C2D22"/><path d="M254 198 q4 5 8 0 M272 198 q4 5 8 0" stroke="#3C2D22" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M258 210 q8 6 16 0" stroke="#C98A6B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M212 120 c-9 -15 -33 -9 -33 9 c0 15 21 27 33 37 c12 -10 33 -22 33 -37 c0 -18 -24 -24 -33 -9 z" fill="#E0A458" opacity=".9"/></svg></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap reveal">
+    <h2>Ready to apply?</h2>
+    <p>Send your resume and the role you are interested in, and our team will be in touch.</p>
+    <div class="btn-row"><a class="btn btn-amber" href="mailto:Intake@SpiritHomeHealthCare.com?subject=Careers%20at%20Spirit%20Home%20Health%20Care">Email Intake@SpiritHomeHealthCare.com</a><a class="btn btn-white" href="tel:+12489969202">Call 248-996-9202</a></div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html" style="font-size:1.3rem"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9.5 12.5a2.5 2.5 0 0 1 5 0c0 1.7-2.5 3.5-2.5 3.5s-2.5-1.8-2.5-3.5z" fill="currentColor" stroke="none"/></svg></span><span>Spirit Home Health Care<small>Southfield &middot; Metro Detroit</small></span></a>
+        <p class="about">Quality in-home care that keeps your loved one safe while preserving independence, dignity, and quality of life, right at home.</p>
+        <div class="social">
+          <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H18V.2C17.5.1 16.3 0 15 0c-2.7 0-4.5 1.6-4.5 4.6V6H8v3h2.5v9H14z"/></svg></a>
+          <a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H1l8-9L1 2h6l4 6zm-1 18h2L7 4H5z"/></svg></a>
+          <a href="http://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.5-5.2a2.7 2.7 0 0 0-1.9-1.9C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.6.5A2.7 2.7 0 0 0 1.5 6.8C1 8.5 1 12 1 12s0 3.5.5 5.2a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.7 2.7 0 0 0 1.9-1.9C23 15.5 23 12 23 12zM10 15.5v-7l6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="https://maps.app.goo.gl/78KayNpbwFcHHtH17" target="_blank" rel="noopener">Leave a Review</a></li></ul></div>
+      <div><h4>Reach Us</h4><ul><li><a href="tel:+12489969202">Phone: (248) 996-9202</a></li><li><a href="mailto:Intake@SpiritHomeHealthCare.com">Intake@SpiritHomeHealthCare.com</a></li><li>Fax referrals: (248) 996-9460</li><li><a href="https://maps.google.com/maps?q=17348+W.+12+Mile+Rd.+Southfield+MI+48076" target="_blank" rel="noopener">17348 W. 12 Mile Rd., Suite 106<br>Southfield, MI 48076</a></li><li>Mon&ndash;Fri: 9:00am &ndash; 5:00pm</li></ul></div>
+    </div>
+    <p class="notice"><strong>Notice of Nondiscrimination:</strong> Spirit Home Health Care complies with applicable federal civil rights laws and does not discriminate, exclude, or treat people differently on the basis of social status, political belief, race, color, religion, national origin, sex (including sexual orientation and gender identity), age, or disability with regard to admission, access to treatment, or employment.</p>
+    <div class="legal"><span>&copy; 2026 Spirit Home Health Care. All rights reserved.</span><span>Medicare Certified &middot; CHAP Accredited</span></div>
+  </div>
+</footer>
+<script>
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>12);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');
+  menuBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menuBtn.setAttribute('aria-expanded',false);}));
+  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const btn=document.getElementById('submitBtn');
+  btn&&btn.addEventListener('click',()=>{const f=document.getElementById('fn');const fn=f?f.value.trim():'';btn.textContent=fn?'Thanks, '+fn+", we'll be in touch \u2713":"Thanks, we'll be in touch \u2713";btn.style.background='var(--teal-deep)';btn.style.color='#fff';setTimeout(()=>{btn.textContent=btn.dataset.label||'Submit';btn.style.background='';btn.style.color='';},3200);});
+</script>
+
+</body>
+</html>
