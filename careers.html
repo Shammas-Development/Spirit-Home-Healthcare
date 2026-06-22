@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal-deep:#21566E;--teal:#2E86B8;--teal-bright:#32A4D5;
-  --sand:#F5F1E9;--paper:#FBFAF7;--amber:#E0A458;--amber-deep:#C9863A;
-  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(33,86,110,.12);
-  --shadow-sm:0 2px 10px rgba(33,86,110,.08);--shadow-md:0 18px 50px -20px rgba(33,86,110,.35);
-  --shadow-lg:0 40px 80px -30px rgba(33,86,110,.45);--r:18px;--maxw:1180px;
+  --teal-deep:#2EA5D6;--teal:#2EA5D6;--teal-bright:#2EA5D6;
+  --sand:#EAF5FB;--paper:#FFFFFF;--amber:#2EA5D6;--amber-deep:#40738C;
+  --ink:#323E49;--ink-soft:#40738C;--line:rgba(64,115,140,.12);
+  --shadow-sm:0 2px 10px rgba(64,115,140,.08);--shadow-md:0 18px 50px -20px rgba(64,115,140,.35);
+  --shadow-lg:0 40px 80px -30px rgba(64,115,140,.45);--r:18px;--maxw:1180px;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
@@ -29,25 +29,25 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spac
 .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--body);font-weight:700;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;will-change:transform}
 .btn svg{width:1.05em;height:1.05em}
 .btn-primary{background:var(--teal-deep);color:#fff;box-shadow:var(--shadow-sm)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#173D4E}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#40738C}
 .btn-amber{background:var(--amber);color:var(--ink)}
-.btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(224,160,88,.7);background:var(--amber-deep);color:#fff}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(46,165,214,.7);background:var(--amber-deep);color:#fff}
 .btn-ghost{background:transparent;color:var(--teal-deep);border-color:var(--line)}
 .btn-ghost:hover{transform:translateY(-3px);border-color:var(--teal);background:#fff;box-shadow:var(--shadow-sm)}
 .btn-white{background:#fff;color:var(--teal-deep)}
 .btn-white:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
-.util{background:var(--teal-deep);color:#dff1f3;font-size:.86rem}
+.util{background:var(--teal-deep);color:#EAF5FB;font-size:.86rem}
 .util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:42px;flex-wrap:wrap}
 .util a{display:inline-flex;align-items:center;gap:.4em;font-weight:600;color:#fff}
-.util a:hover{color:var(--amber)}
-.util .review{color:var(--amber);font-weight:800}
+.util a:hover{color:#BFD0DA}
+.util .review{color:#FFFFFF;font-weight:800}
 .util .review:hover{color:#fff}
 .util .pill{display:inline-flex;align-items:center;gap:.5em}
-.util .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pulse 2.4s infinite}
+.util .dot{width:7px;height:7px;border-radius:50%;background:#FFFFFF;animation:pulse 2.4s infinite}
 .util .right{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,160,88,.6)}70%{box-shadow:0 0 0 9px rgba(224,160,88,0)}100%{box-shadow:0 0 0 0 rgba(224,160,88,0)}}
-header.nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
 header.nav.scrolled{box-shadow:var(--shadow-sm);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px;transition:min-height .3s}
 header.nav.scrolled .wrap{min-height:64px}
@@ -65,7 +65,7 @@ nav.links a:hover::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:14px}
 .menu-btn{display:none;position:relative;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
 .menu-btn svg{width:28px;height:28px;transition:opacity .2s}
-.nav-overlay{position:fixed;inset:0;background:rgba(33,86,110,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
+.nav-overlay{position:fixed;inset:0;background:rgba(64,115,140,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
 .nav-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
 body.menu-open{overflow:hidden}
 body.menu-open .menu-btn>svg{opacity:0}
@@ -73,7 +73,7 @@ body.menu-open .menu-btn::before,body.menu-open .menu-btn::after{content:"";posi
 body.menu-open .menu-btn::before{transform:translate(-50%,-50%) rotate(45deg)}
 body.menu-open .menu-btn::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .hero{position:relative;padding:72px 0 90px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 70% at 88% 8%,rgba(43,179,192,.16),transparent 60%),radial-gradient(55% 60% at 6% 95%,rgba(224,160,88,.16),transparent 60%),var(--paper)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 70% at 88% 8%,rgba(46,165,214,.16),transparent 60%),radial-gradient(55% 60% at 6% 95%,rgba(46,165,214,.16),transparent 60%),var(--paper)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
 .hero-copy{max-width:560px}
 .hero h1{font-size:clamp(2.6rem,5.4vw,4.15rem);color:var(--ink);margin:.5em 0 .42em}
@@ -93,13 +93,13 @@ body.menu-open .menu-btn::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .hero-media .badge span{font-size:.78rem;color:var(--ink-soft);font-weight:600}
 .hero-media .leaf{position:absolute;left:-26px;top:40px;width:84px;height:84px;border-radius:24px;background:linear-gradient(140deg,var(--amber),var(--amber-deep));opacity:.9;z-index:-1;transform:rotate(8deg)}
 .page-hero{position:relative;padding:60px 0 52px;overflow:hidden}
-.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 92% 0%,rgba(43,179,192,.14),transparent 60%),radial-gradient(50% 80% at 0% 100%,rgba(224,160,88,.14),transparent 60%),var(--paper)}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 92% 0%,rgba(46,165,214,.14),transparent 60%),radial-gradient(50% 80% at 0% 100%,rgba(46,165,214,.14),transparent 60%),var(--paper)}
 .page-hero .crumb{font-weight:700;font-size:.8rem;color:var(--teal);letter-spacing:.04em}
 .page-hero .crumb a{color:var(--ink-soft)}
 .page-hero .crumb a:hover{color:var(--teal)}
 .page-hero h1{font-size:clamp(2.3rem,5vw,3.5rem);color:var(--ink);margin:.3em 0 .35em}
 .page-hero p{font-size:1.15rem;color:var(--ink-soft);max-width:46em}
-.trust{background:var(--teal-deep);color:#cfe7ea;padding:30px 0}
+.trust{background:var(--teal-deep);color:#BFD0DA;padding:30px 0}
 .trust .wrap{display:flex;align-items:center;justify-content:center;gap:16px 40px;flex-wrap:wrap}
 .trust .label{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.6)}
 .seal{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.97);color:var(--teal-deep);border-radius:100px;padding:.6em 1.15em;font-weight:800;font-size:.9rem}
@@ -170,17 +170,17 @@ section{padding:96px 0}
 .stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:center;box-shadow:var(--shadow-sm)}
 .stat b{font-family:var(--display);font-size:2.4rem;color:var(--teal-deep);display:block;line-height:1}
 .stat span{font-weight:700;font-size:.9rem;color:var(--ink-soft);margin-top:6px;display:block}
-.careers-band{background:var(--teal-deep);color:#eaf6f7;position:relative;overflow:hidden}
-.careers-band::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 20%,rgba(43,179,192,.3),transparent 60%),radial-gradient(40% 70% at 10% 90%,rgba(224,160,88,.22),transparent 60%)}
+.careers-band{background:var(--teal-deep);color:#EAF5FB;position:relative;overflow:hidden}
+.careers-band::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 85% 20%,rgba(46,165,214,.3),transparent 60%),radial-gradient(40% 70% at 10% 90%,rgba(46,165,214,.22),transparent 60%)}
 .careers-band .wrap{position:relative;display:grid;grid-template-columns:1.4fr .9fr;gap:40px;align-items:center}
 .careers-band h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem)}
-.careers-band p{color:#cfe7ea;font-size:1.12rem;margin-top:.6em;max-width:34em}
+.careers-band p{color:#BFD0DA;font-size:1.12rem;margin-top:.6em;max-width:34em}
 .careers-band .cta-side{display:flex;justify-content:flex-end}
 .cta-band{background:linear-gradient(150deg,var(--teal-deep),var(--teal));color:#fff;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 85% 15%,rgba(43,179,192,.35),transparent 60%),radial-gradient(40% 70% at 12% 90%,rgba(224,160,88,.25),transparent 60%)}
+.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 85% 15%,rgba(46,165,214,.35),transparent 60%),radial-gradient(40% 70% at 12% 90%,rgba(46,165,214,.25),transparent 60%)}
 .cta-band .wrap{position:relative}
 .cta-band h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:.4em}
-.cta-band p{color:#d8eef0;font-size:1.12rem;max-width:40em;margin:0 auto 1.4em}
+.cta-band p{color:#EAF5FB;font-size:1.12rem;max-width:40em;margin:0 auto 1.4em}
 .cta-band .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .contact{background:var(--sand)}
 .contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
@@ -205,11 +205,11 @@ section{padding:96px 0}
 .form .note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:12px}
 .map-embed{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line);aspect-ratio:16/9;background:var(--sand);margin-top:40px}
 .map-embed iframe{width:100%;height:100%;border:0;display:block}
-footer.site{background:var(--ink);color:#bcd0d4;padding:64px 0 30px;font-size:.95rem}
+footer.site{background:var(--ink);color:#BFD0DA;padding:64px 0 30px;font-size:.95rem}
 footer.site .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
 footer.site .brand{color:#fff}
 footer.site .brand small{color:var(--teal-bright)}
-footer.site p.about{margin-top:16px;max-width:32em;color:#9fb6bb;line-height:1.7}
+footer.site p.about{margin-top:16px;max-width:32em;color:#BFD0DA;line-height:1.7}
 footer.site h4{font-family:var(--body);font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
 footer.site ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 footer.site ul a{overflow-wrap:anywhere}
@@ -218,8 +218,8 @@ footer.site .social{display:flex;gap:12px;margin-top:18px}
 footer.site .social a{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,transform .25s}
 footer.site .social a:hover{background:var(--teal);transform:translateY(-3px)}
 footer.site .social svg{width:18px;height:18px;color:#fff}
-footer.site .notice{font-size:.78rem;color:#7e979c;line-height:1.7;margin-top:28px;max-width:75ch}
-footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px;font-size:.82rem;color:#7e979c}
+footer.site .notice{font-size:.78rem;color:#40738C;line-height:1.7;margin-top:28px;max-width:75ch}
+footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px;font-size:.82rem;color:#40738C}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 [data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}
@@ -242,7 +242,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  footer.site .top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
- nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#173D4E);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
+ nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#323E49);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
  nav.links.open{transform:none}
  nav.links a{font-size:1.1rem;font-weight:700;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.14);color:#fff}
  nav.links a:hover{color:var(--amber)}
@@ -263,6 +263,9 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  .reveal{opacity:1;transform:none}.load{opacity:1;transform:none}
 }
 
+.brand .logo{height:54px;width:auto;display:block}
+.brand{gap:0}
+@media(max-width:560px){.brand .logo{height:44px}}
 </style>
 </head>
 <body class="p-careers">
@@ -278,10 +281,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
 </div>
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9.5 12.5a2.5 2.5 0 0 1 5 0c0 1.7-2.5 3.5-2.5 3.5s-2.5-1.8-2.5-3.5z" fill="currentColor" stroke="none"/></svg></span>
-      <span>Spirit Home Health Care<small>Southfield &middot; Metro Detroit</small></span>
-    </a>
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Spirit Home Health Care — 248-996-9202" class="logo"/></a>
     <nav class="links" id="links">
       <a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </nav>
@@ -321,9 +321,9 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
     <div class="reveal">
       <p class="eyebrow">Why work with us</p>
       <h2 style="font-size:clamp(1.9rem,3.8vw,2.7rem);margin:.35em 0 1em">Supported, respected, set up to succeed</h2>
-      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Training and resources</h3><p>You get exceptional training, support, and the resources to deliver care you can be proud of.</p></div></div>
-      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible scheduling</h3><p>Full-time, part-time, and per-visit options that work around your life.</p></div></div>
-      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>Meaningful work</h3><p>Every visit helps someone stay safe, independent, and at home with dignity.</p></div></div>
+      <div class="val" style="border-color:rgba(64,115,140,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Training and resources</h3><p>You get exceptional training, support, and the resources to deliver care you can be proud of.</p></div></div>
+      <div class="val" style="border-color:rgba(64,115,140,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible scheduling</h3><p>Full-time, part-time, and per-visit options that work around your life.</p></div></div>
+      <div class="val" style="border-color:rgba(64,115,140,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>Meaningful work</h3><p>Every visit helps someone stay safe, independent, and at home with dignity.</p></div></div>
     </div>
     <div class="why-media reveal" data-delay="1"><img src="assets/img/hha.jpg" alt="A Spirit caregiver supporting a client at home" loading="lazy"/></div>
   </div>
@@ -341,7 +341,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
   <div class="wrap">
     <div class="top">
       <div>
-        <a class="brand" href="index.html" style="font-size:1.3rem"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9.5 12.5a2.5 2.5 0 0 1 5 0c0 1.7-2.5 3.5-2.5 3.5s-2.5-1.8-2.5-3.5z" fill="currentColor" stroke="none"/></svg></span><span>Spirit Home Health Care<small>Southfield &middot; Metro Detroit</small></span></a>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Spirit Home Health Care" style="height:48px;width:auto;background:#fff;padding:10px 14px;border-radius:12px"/></a>
         <p class="about">Quality in-home care that keeps your loved one safe while preserving independence, dignity, and quality of life, right at home.</p>
         <div class="social">
           <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H18V.2C17.5.1 16.3 0 15 0c-2.7 0-4.5 1.6-4.5 4.6V6H8v3h2.5v9H14z"/></svg></a>

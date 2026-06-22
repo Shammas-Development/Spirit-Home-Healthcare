@@ -16,7 +16,12 @@
       "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o shhc.html)",
       "Bash(curl -s \"https://www.spirithomehealthcare.com/system/sites/57104/custom.css?t=1732633536\" -o custom.css)",
       "Bash(curl -s \"https://www.spirithomehealthcare.com/assets/site-445eab9a3d1ae68ad6a7e90d9fcc12607626a1690555d8b84ac3c75924978ebb.css\" -o site.css)",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(perl -0777 -i -pe ' *)",
+      "Bash(open index.html)",
+      "Bash(open about.html)",
+      "Bash(open services.html)",
+      "Bash(open \"https://spirithomehealthcare.com/\")"
     ]
   }
 }
