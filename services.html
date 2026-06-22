@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal-deep:#0C4A56;--teal:#15808F;--teal-bright:#2BB3C0;
+  --teal-deep:#21566E;--teal:#2E86B8;--teal-bright:#32A4D5;
   --sand:#F5F1E9;--paper:#FBFAF7;--amber:#E0A458;--amber-deep:#C9863A;
-  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(12,74,86,.12);
-  --shadow-sm:0 2px 10px rgba(12,74,86,.08);--shadow-md:0 18px 50px -20px rgba(12,74,86,.35);
-  --shadow-lg:0 40px 80px -30px rgba(12,74,86,.45);--r:18px;--maxw:1180px;
+  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(33,86,110,.12);
+  --shadow-sm:0 2px 10px rgba(33,86,110,.08);--shadow-md:0 18px 50px -20px rgba(33,86,110,.35);
+  --shadow-lg:0 40px 80px -30px rgba(33,86,110,.45);--r:18px;--maxw:1180px;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spac
 .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--body);font-weight:700;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;will-change:transform}
 .btn svg{width:1.05em;height:1.05em}
 .btn-primary{background:var(--teal-deep);color:#fff;box-shadow:var(--shadow-sm)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#0a3c46}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#173D4E}
 .btn-amber{background:var(--amber);color:var(--ink)}
 .btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(224,160,88,.7);background:var(--amber-deep);color:#fff}
 .btn-ghost{background:transparent;color:var(--teal-deep);border-color:var(--line)}
@@ -65,7 +65,7 @@ nav.links a:hover::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:14px}
 .menu-btn{display:none;position:relative;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
 .menu-btn svg{width:28px;height:28px;transition:opacity .2s}
-.nav-overlay{position:fixed;inset:0;background:rgba(12,74,86,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
+.nav-overlay{position:fixed;inset:0;background:rgba(33,86,110,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
 .nav-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
 body.menu-open{overflow:hidden}
 body.menu-open .menu-btn>svg{opacity:0}
@@ -151,6 +151,7 @@ section{padding:96px 0}
 .svc-row .svc-art{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:16/12;background:var(--sand)}
 .svc-row.flip .svc-art{order:2}
 .svc-art svg{width:100%;height:100%;display:block}
+.svc-art img{width:100%;height:100%;object-fit:cover;display:block}
 .svc-row .tagx{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
 .svc-row h2{font-size:clamp(1.6rem,3vw,2.05rem);color:var(--ink);margin-bottom:.4em}
 .svc-row p{color:var(--ink-soft)}
@@ -241,7 +242,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  footer.site .top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
- nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#0a3c46);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
+ nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#173D4E);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
  nav.links.open{transform:none}
  nav.links a{font-size:1.1rem;font-weight:700;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.14);color:#fff}
  nav.links a:hover{color:var(--amber)}
@@ -315,42 +316,42 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
   <div class="wrap">
 
     <div class="svc-row reveal" id="nursing">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#E2F0F1"/><circle cx="330" cy="55" r="75" fill="#2BB3C0" opacity=".16"/><circle cx="70" cy="235" r="52" fill="#E0A458" opacity=".14"/><rect x="150" y="74" width="100" height="100" rx="26" fill="#fff" stroke="#0C4A56" stroke-width="8"/><path d="M200 98 V150 M174 124 H226" stroke="#15808F" stroke-width="15" stroke-linecap="round"/><path d="M120 214 H172 L184 192 L201 236 L216 214 H280" fill="none" stroke="#E0A458" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/nursing.jpg" alt="Skilled nursing care at home" loading="lazy"/></div>
       <div><span class="tagx">Skilled Nursing</span><h2>Skilled Nursing Care</h2><p>Home health nursing is a specialty in which nurses provide multidimensional care to patients of all ages, right in the comfort of home. Our Registered Nurses manage the clinical side of recovery so families can focus on being family.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Wound care and dressing changes</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Medication management and education</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Monitoring of chronic and acute conditions</li></ul></div>
     </div>
 
     <div class="svc-row flip reveal" id="hha">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#F2EADF"/><circle cx="320" cy="60" r="72" fill="#E0A458" opacity=".16"/><circle cx="74" cy="230" r="50" fill="#15808F" opacity=".12"/><path d="M200 86 c-15 -24 -52 -15 -52 13 c0 24 33 44 52 58 c19 -14 52 -34 52 -58 c0 -28 -37 -37 -52 -13 z" fill="#E0A458"/><path d="M132 176 c20 44 116 44 136 0" fill="none" stroke="#15808F" stroke-width="9" stroke-linecap="round"/><path d="M150 186 v26 M178 196 v30 M222 196 v30 M250 186 v26" stroke="#15808F" stroke-width="9" stroke-linecap="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/hha.jpg" alt="Home health aide assisting a patient" loading="lazy"/></div>
       <div><span class="tagx">Home Health Aide</span><h2>Home Health Aide (HHA)</h2><p>Our Certified Home Health Aides provide personal care, assist with exercises and transfers, and monitor health day to day, reporting any changes directly to our Registered Nurses.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Bathing, dressing, and personal hygiene</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Safe transfers and mobility support</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Daily health monitoring and reporting</li></ul></div>
     </div>
 
     <div class="svc-row reveal" id="pt">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#E6F5F6"/><circle cx="328" cy="60" r="74" fill="#2BB3C0" opacity=".16"/><circle cx="72" cy="232" r="50" fill="#E0A458" opacity=".14"/><circle cx="196" cy="80" r="20" fill="#0C4A56"/><path d="M196 100 V162 M196 120 L160 146 M196 120 L236 96 M196 162 L172 218 M196 162 L222 218" fill="none" stroke="#0C4A56" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M252 96 q16 12 8 32 M268 86 q22 16 10 44" fill="none" stroke="#E0A458" stroke-width="7" stroke-linecap="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/pt.jpg" alt="Physical therapy session at home" loading="lazy"/></div>
       <div><span class="tagx">Physical Therapy</span><h2>Physical Therapy (PT)</h2><p>Our home-based Physical Therapists help patients improve mobility, manage pain, and prevent disability through personalized care, exercises, and therapy designed around each person's goals.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Strength and balance training</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Fall prevention and gait training</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Pain management and recovery</li></ul></div>
     </div>
 
     <div class="svc-row flip reveal" id="ot">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#F7ECDC"/><circle cx="322" cy="58" r="72" fill="#E0A458" opacity=".18"/><circle cx="74" cy="232" r="50" fill="#15808F" opacity=".12"/><rect x="158" y="118" width="78" height="66" rx="16" fill="#fff" stroke="#C9863A" stroke-width="8"/><path d="M236 134 q28 0 28 24 q0 24 -28 24" fill="none" stroke="#C9863A" stroke-width="8"/><path d="M178 96 q-6 -10 2 -20 M200 96 q-6 -10 2 -20 M222 96 q-6 -10 2 -20" fill="none" stroke="#15808F" stroke-width="6" stroke-linecap="round"/><path d="M150 196 q50 24 96 0" fill="none" stroke="#15808F" stroke-width="8" stroke-linecap="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/ot.jpg" alt="Occupational therapy at home" loading="lazy"/></div>
       <div><span class="tagx">Occupational Therapy</span><h2>Occupational Therapy (OT)</h2><p>Our home-based Occupational Therapists help patients regain and maintain daily living and work skills, adapting the home environment for a safe and successful recovery.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Daily living skills retraining</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Home safety adaptations</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Assistive device training</li></ul></div>
     </div>
 
     <div class="svc-row reveal" id="slt">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#E2F0F1"/><circle cx="328" cy="58" r="72" fill="#2BB3C0" opacity=".16"/><circle cx="72" cy="232" r="50" fill="#E0A458" opacity=".14"/><path d="M146 88 h108 a22 22 0 0 1 22 22 v46 a22 22 0 0 1 -22 22 h-58 l-30 26 v-26 h-20 a22 22 0 0 1 -22 -22 v-46 a22 22 0 0 1 22 -22 z" fill="#fff" stroke="#15808F" stroke-width="8"/><path d="M172 118 V148 M200 108 V158 M228 122 V144" stroke="#E0A458" stroke-width="9" stroke-linecap="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/slt.jpg" alt="Speech and language therapy" loading="lazy"/></div>
       <div><span class="tagx">Speech &amp; Language</span><h2>Speech and Language Therapy (SLT)</h2><p>Speech therapy helps individuals improve communication, swallowing, and expression through targeted exercises and techniques tailored to each patient.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Speech and language rehabilitation</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Swallowing therapy</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Cognitive communication support</li></ul></div>
     </div>
 
     <div class="svc-row flip reveal" id="lmsw">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#F2EADF"/><circle cx="320" cy="60" r="72" fill="#E0A458" opacity=".16"/><circle cx="74" cy="230" r="50" fill="#15808F" opacity=".12"/><circle cx="158" cy="128" r="28" fill="#0C4A56"/><path d="M116 196 a42 42 0 0 1 84 0 Z" fill="#0C4A56"/><circle cx="246" cy="138" r="24" fill="#15808F"/><path d="M210 198 a36 36 0 0 1 72 0 Z" fill="#15808F"/><path d="M200 78 c-8 -13 -28 -8 -28 8 c0 13 18 23 28 31 c10 -8 28 -18 28 -31 c0 -16 -20 -21 -28 -8 z" fill="#E0A458"/></svg></div>
+      <div class="svc-art"><img src="assets/img/lmsw.jpg" alt="Medical social worker with a family" loading="lazy"/></div>
       <div><span class="tagx">Medical Social Work</span><h2>Licensed Master Social Work (LMSW)</h2><p>A Licensed Master Social Worker plays a critical role in supporting patients and families, providing psychosocial assessments and connecting people with the resources they need.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Psychosocial assessments</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Community resource coordination</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Family counseling and support</li></ul></div>
     </div>
 
     <div class="svc-row reveal" id="translation">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#E6F5F6"/><circle cx="328" cy="58" r="74" fill="#2BB3C0" opacity=".16"/><circle cx="72" cy="232" r="50" fill="#E0A458" opacity=".14"/><circle cx="190" cy="138" r="62" fill="#fff" stroke="#15808F" stroke-width="8"/><ellipse cx="190" cy="138" rx="26" ry="62" fill="none" stroke="#15808F" stroke-width="6"/><path d="M128 138 H252 M138 108 H242 M138 168 H242" stroke="#15808F" stroke-width="6"/><path d="M250 90 h44 a14 14 0 0 1 14 14 v22 a14 14 0 0 1 -14 14 h-22 l-16 14 v-14 a14 14 0 0 1 -6 -50 z" fill="#E0A458"/><path d="M268 108 h22 M268 120 h14" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/translation.jpg" alt="Translation and interpreter services" loading="lazy"/></div>
       <div><span class="tagx">Translation</span><h2>Translation Services</h2><p>Spirit Home Health Care provides translation services in over 100 languages, ensuring clear and accurate communication across language barriers so every family understands their loved one's care.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Over 100 languages supported</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Clear communication for every family</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Culturally sensitive care</li></ul></div>
     </div>
 
     <div class="svc-row flip reveal" id="emr">
-      <div class="svc-art"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="275" fill="#F7ECDC"/><circle cx="322" cy="58" r="72" fill="#E0A458" opacity=".18"/><circle cx="74" cy="232" r="50" fill="#15808F" opacity=".12"/><rect x="142" y="86" width="116" height="92" rx="14" fill="#fff" stroke="#C9863A" stroke-width="8"/><path d="M156 138 H180 L190 116 L204 160 L214 138 H244" fill="none" stroke="#15808F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="252" cy="178" r="28" fill="#15808F"/><path d="M240 178 l8 8 14 -16" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="svc-art"><img src="assets/img/emr.jpg" alt="Electronic medical records" loading="lazy"/></div>
       <div><span class="tagx">Technology</span><h2>Electronic Medical Records (EMR)</h2><p>Spirit Home Health Care uses advanced electronic medical records to ensure accurate, complete records, reduce errors, and provide the care team with real-time access to patient information.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Accurate, complete records</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Real-time team access</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Fewer errors, safer care</li></ul></div>
     </div>
 
@@ -381,6 +382,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <div><h4>Reach Us</h4><ul><li><a href="tel:+12489969202">Phone: (248) 996-9202</a></li><li><a href="mailto:Intake@SpiritHomeHealthCare.com">Intake@SpiritHomeHealthCare.com</a></li><li>Fax referrals: (248) 996-9460</li><li><a href="https://maps.google.com/maps?q=17348+W.+12+Mile+Rd.+Southfield+MI+48076" target="_blank" rel="noopener">17348 W. 12 Mile Rd., Suite 106<br>Southfield, MI 48076</a></li><li>Mon&ndash;Fri: 9:00am &ndash; 5:00pm</li></ul></div>
     </div>
     <p class="notice"><strong>Notice of Nondiscrimination:</strong> Spirit Home Health Care complies with applicable federal civil rights laws and does not discriminate, exclude, or treat people differently on the basis of social status, political belief, race, color, religion, national origin, sex (including sexual orientation and gender identity), age, or disability with regard to admission, access to treatment, or employment.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;padding:30px 0 6px"><img src="assets/img/cert-medicare.png" alt="Medicare Certified" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-chap.png" alt="CHAP Accredited" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-cms.png" alt="CMS - Centers for Medicare &amp; Medicaid Services" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/></div>
     <div class="legal"><span>&copy; 2026 Spirit Home Health Care. All rights reserved.</span><span>Medicare Certified &middot; CHAP Accredited</span></div>
   </div>
 </footer>

@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal-deep:#0C4A56;--teal:#15808F;--teal-bright:#2BB3C0;
+  --teal-deep:#21566E;--teal:#2E86B8;--teal-bright:#32A4D5;
   --sand:#F5F1E9;--paper:#FBFAF7;--amber:#E0A458;--amber-deep:#C9863A;
-  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(12,74,86,.12);
-  --shadow-sm:0 2px 10px rgba(12,74,86,.08);--shadow-md:0 18px 50px -20px rgba(12,74,86,.35);
-  --shadow-lg:0 40px 80px -30px rgba(12,74,86,.45);--r:18px;--maxw:1180px;
+  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(33,86,110,.12);
+  --shadow-sm:0 2px 10px rgba(33,86,110,.08);--shadow-md:0 18px 50px -20px rgba(33,86,110,.35);
+  --shadow-lg:0 40px 80px -30px rgba(33,86,110,.45);--r:18px;--maxw:1180px;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spac
 .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--body);font-weight:700;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;will-change:transform}
 .btn svg{width:1.05em;height:1.05em}
 .btn-primary{background:var(--teal-deep);color:#fff;box-shadow:var(--shadow-sm)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#0a3c46}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#173D4E}
 .btn-amber{background:var(--amber);color:var(--ink)}
 .btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(224,160,88,.7);background:var(--amber-deep);color:#fff}
 .btn-ghost{background:transparent;color:var(--teal-deep);border-color:var(--line)}
@@ -65,7 +65,7 @@ nav.links a:hover::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:14px}
 .menu-btn{display:none;position:relative;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
 .menu-btn svg{width:28px;height:28px;transition:opacity .2s}
-.nav-overlay{position:fixed;inset:0;background:rgba(12,74,86,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
+.nav-overlay{position:fixed;inset:0;background:rgba(33,86,110,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
 .nav-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
 body.menu-open{overflow:hidden}
 body.menu-open .menu-btn>svg{opacity:0}
@@ -102,9 +102,10 @@ body.menu-open .menu-btn::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .trust{background:var(--teal-deep);color:#cfe7ea;padding:30px 0}
 .trust .wrap{display:flex;align-items:center;justify-content:center;gap:16px 40px;flex-wrap:wrap}
 .trust .label{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.6)}
-.seal{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.97);color:var(--teal-deep);border-radius:100px;padding:.6em 1.15em;font-weight:800;font-size:.9rem}
+.seal{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--teal-deep);border-radius:14px;padding:.55em 1.15em;font-weight:800;font-size:.9rem;box-shadow:var(--shadow-sm)}
 .seal svg{width:26px;height:26px;color:var(--teal);flex:none}
 .seal small{display:block;font-weight:600;font-size:.66rem;color:var(--ink-soft);letter-spacing:.02em}
+.seal img{height:48px;width:auto;display:block}
 section{padding:96px 0}
 .sec-head{max-width:660px;margin-bottom:54px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
@@ -118,6 +119,15 @@ section{padding:96px 0}
 .mission blockquote .ital{font-style:italic}
 .mission .who{margin-top:22px;font-weight:700;color:var(--ink)}
 .mission .who span{display:block;font-weight:600;color:var(--ink-soft);font-size:.92rem}
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.founder{position:relative}
+.founder .pic{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:1/1.18;border:6px solid #fff;box-shadow:var(--shadow-md);background:linear-gradient(150deg,#2E86B8,#21566E);display:grid;place-items:center}
+.founder .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.founder .pic .ph{font-family:var(--display);font-weight:600;font-size:2.6rem;color:#fff;opacity:.85}
+.founder .name{margin-top:14px;font-weight:800;color:var(--ink);font-size:1.02rem}
+.founder .role{font-weight:600;color:var(--teal);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+.founder:nth-child(2){margin-top:34px}
+@media(max-width:560px){.founder:nth-child(2){margin-top:0}}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
@@ -241,7 +251,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  footer.site .top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
- nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#0a3c46);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
+ nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#173D4E);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
  nav.links.open{transform:none}
  nav.links a{font-size:1.1rem;font-weight:700;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.14);color:#fff}
  nav.links a:hover{color:var(--amber)}
@@ -302,12 +312,23 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
 
 <section class="mission" style="background:var(--paper)">
   <div class="wrap">
-    <div class="figure reveal"><svg viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A home health aide standing beside a senior"><defs><linearGradient id="sand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EC"/><stop offset="1" stop-color="#EFE6D5"/></linearGradient></defs><rect width="400" height="460" fill="url(#sand2)"/><circle cx="200" cy="170" r="140" fill="#15808F" opacity=".10"/><path d="M0 372 H400 V460 H0 Z" fill="#E4D7BF"/><ellipse cx="200" cy="374" rx="180" ry="22" fill="#0C4A56" opacity=".08"/><rect x="96" y="244" width="78" height="130" rx="32" fill="#C9863A"/><circle cx="135" cy="206" r="30" fill="#E8BE97"/><path d="M105 200 a30 30 0 0 1 60 0 q-7 -18 -30 -18 q-23 0 -30 18 Z" fill="#BFC8CD"/><path d="M122 210 q4 5 8 0 M140 210 q4 5 8 0" stroke="#7C5E48" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M127 222 q8 6 16 0" stroke="#A8744F" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="226" y="232" width="80" height="142" rx="34" fill="#15808F"/><path d="M226 286 q-22 -22 -50 -16" stroke="#15808F" stroke-width="22" fill="none" stroke-linecap="round"/><circle cx="178" cy="272" r="12" fill="#F0C9A8"/><circle cx="266" cy="196" r="31" fill="#F0C9A8"/><path d="M235 194 a31 31 0 0 1 62 0 q-6 -22 -31 -22 q-25 0 -31 22 Z" fill="#3C2D22"/><path d="M254 198 q4 5 8 0 M272 198 q4 5 8 0" stroke="#3C2D22" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M258 210 q8 6 16 0" stroke="#C98A6B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M212 120 c-9 -15 -33 -9 -33 9 c0 15 21 27 33 37 c12 -10 33 -22 33 -37 c0 -18 -24 -24 -33 -9 z" fill="#E0A458" opacity=".9"/></svg></div>
+    <div class="founders reveal">
+      <div class="founder">
+        <div class="pic"><span class="ph">NB</span><img src="assets/neil.jpg" alt="Neil Bahura, Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
+        <div class="role">Founder</div>
+        <div class="name">Neil Bahura</div>
+      </div>
+      <div class="founder">
+        <div class="pic"><span class="ph">EA</span><img src="assets/eymen.jpg" alt="Eymen Allos, Co-Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
+        <div class="role">Co-Founder</div>
+        <div class="name">Eymen Allos</div>
+      </div>
+    </div>
     <div class="reveal" data-delay="1">
-      <p class="eyebrow">Who we are</p>
-      <blockquote>The right balance of <span class="ital">independence, dignity, and quality of life</span>, while keeping your loved one safe.</blockquote>
-      <p style="margin-top:22px;color:var(--ink-soft)">Spirit Home Health Care caregivers receive exceptional training, support, and resources to deliver an unmatched care experience. We understand that people have different needs at different stages of life, and our team is equipped to provide personalized care that meets the unique needs of each individual.</p>
-      <p style="margin-top:16px;color:var(--ink-soft)">Our Registered Nurses, Physical, Occupational, and Speech Therapists, Social Workers, and Home Health Aides work together to assess the therapeutic, rehabilitative, and functional status of our patients in the comfort of their homes, supporting them to live as productively as possible.</p>
+      <p class="eyebrow">Our story</p>
+      <blockquote>Honored to provide quality home health care while <span class="ital">nourishing the unique spirit</span> of every client.</blockquote>
+      <p style="margin-top:22px;color:var(--ink-soft)">Spirit Home Health Care was founded by Neil Bahura and his nephew Eymen Allos, out of personal experience. Neil spent over 12 years caring for aging parents living with dementia and cancer &mdash; managing their bathing, feeding, transportation, and medical appointments. That journey led him to start a home care agency and, together with Eymen, to create Spirit Home Health Care.</p>
+      <p style="margin-top:16px;color:var(--ink-soft)">We deliver care with dignity, comfort, and patient-centered goals, and we respect each client's autonomy and right to make their own decisions. Our Registered Nurses, Physical, Occupational, and Speech Therapists, Social Workers, and Home Health Aides work together to support healing, independence, and overall well-being in the comfort of home &mdash; with culturally sensitive care in over 100 languages.</p>
     </div>
   </div>
 </section>
@@ -332,16 +353,16 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <div class="val"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>RN-led, one coordinated team</h3><p>Nurses, therapists, aides, and social workers communicate as one, with no gaps and no repeating yourself.</p></div></div>
       <div class="val"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><div><h3>Care in your language</h3><p>Translation in over 100 languages means every family fully understands their loved one's care.</p></div></div>
     </div>
-    <div class="why-media reveal" data-delay="1"><svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hands holding a heart, symbolizing care"><defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15808F"/><stop offset="1" stop-color="#0C4A56"/></linearGradient></defs><rect width="400" height="480" fill="url(#tg)"/><circle cx="200" cy="200" r="150" fill="#2BB3C0" opacity=".22"/><circle cx="200" cy="210" r="100" fill="#fff" opacity=".06"/><path d="M200 150 c-26 -42 -92 -26 -92 26 c0 44 60 80 92 104 c32 -24 92 -60 92 -104 c0 -52 -66 -68 -92 -26 z" fill="#E0A458"/><path d="M120 332 c-6 30 30 56 80 56 c50 0 86 -26 80 -56 c-8 22 -42 38 -80 38 c-38 0 -72 -16 -80 -38 z" fill="#0E5C6A"/><path d="M118 330 q-14 8 -16 28 M282 330 q14 8 16 28" fill="none" stroke="#0E5C6A" stroke-width="22" stroke-linecap="round"/></svg></div>
+    <div class="why-media reveal" data-delay="1"><svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hands holding a heart, symbolizing care"><defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E86B8"/><stop offset="1" stop-color="#21566E"/></linearGradient></defs><rect width="400" height="480" fill="url(#tg)"/><circle cx="200" cy="200" r="150" fill="#32A4D5" opacity=".22"/><circle cx="200" cy="210" r="100" fill="#fff" opacity=".06"/><path d="M200 150 c-26 -42 -92 -26 -92 26 c0 44 60 80 92 104 c32 -24 92 -60 92 -104 c0 -52 -66 -68 -92 -26 z" fill="#E0A458"/><path d="M120 332 c-6 30 30 56 80 56 c50 0 86 -26 80 -56 c-8 22 -42 38 -80 38 c-38 0 -72 -16 -80 -38 z" fill="#0E5C6A"/><path d="M118 330 q-14 8 -16 28 M282 330 q14 8 16 28" fill="none" stroke="#0E5C6A" stroke-width="22" stroke-linecap="round"/></svg></div>
   </div>
 </section>
 
 <div class="trust">
   <div class="wrap reveal">
     <span class="label">Trusted &amp; Accredited</span>
-    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg><span>Medicare<small>Certified provider</small></span></span>
-    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>CHAP<small>Accredited</small></span></span>
-    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg><span>CMS<small>Medicare &amp; Medicaid</small></span></span>
+    <span class="seal"><img src="assets/img/cert-medicare.png" alt="Medicare Certified"/></span>
+    <span class="seal"><img src="assets/img/cert-chap.png" alt="CHAP Accredited"/></span>
+    <span class="seal"><img src="assets/img/cert-cms.png" alt="CMS — Centers for Medicare &amp; Medicaid Services"/></span>
   </div>
 </div>
 
@@ -369,6 +390,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <div><h4>Reach Us</h4><ul><li><a href="tel:+12489969202">Phone: (248) 996-9202</a></li><li><a href="mailto:Intake@SpiritHomeHealthCare.com">Intake@SpiritHomeHealthCare.com</a></li><li>Fax referrals: (248) 996-9460</li><li><a href="https://maps.google.com/maps?q=17348+W.+12+Mile+Rd.+Southfield+MI+48076" target="_blank" rel="noopener">17348 W. 12 Mile Rd., Suite 106<br>Southfield, MI 48076</a></li><li>Mon&ndash;Fri: 9:00am &ndash; 5:00pm</li></ul></div>
     </div>
     <p class="notice"><strong>Notice of Nondiscrimination:</strong> Spirit Home Health Care complies with applicable federal civil rights laws and does not discriminate, exclude, or treat people differently on the basis of social status, political belief, race, color, religion, national origin, sex (including sexual orientation and gender identity), age, or disability with regard to admission, access to treatment, or employment.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;padding:30px 0 6px"><img src="assets/img/cert-medicare.png" alt="Medicare Certified" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-chap.png" alt="CHAP Accredited" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-cms.png" alt="CMS - Centers for Medicare &amp; Medicaid Services" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/></div>
     <div class="legal"><span>&copy; 2026 Spirit Home Health Care. All rights reserved.</span><span>Medicare Certified &middot; CHAP Accredited</span></div>
   </div>
 </footer>

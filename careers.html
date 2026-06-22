@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal-deep:#0C4A56;--teal:#15808F;--teal-bright:#2BB3C0;
+  --teal-deep:#21566E;--teal:#2E86B8;--teal-bright:#32A4D5;
   --sand:#F5F1E9;--paper:#FBFAF7;--amber:#E0A458;--amber-deep:#C9863A;
-  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(12,74,86,.12);
-  --shadow-sm:0 2px 10px rgba(12,74,86,.08);--shadow-md:0 18px 50px -20px rgba(12,74,86,.35);
-  --shadow-lg:0 40px 80px -30px rgba(12,74,86,.45);--r:18px;--maxw:1180px;
+  --ink:#14272C;--ink-soft:#3C5158;--line:rgba(33,86,110,.12);
+  --shadow-sm:0 2px 10px rgba(33,86,110,.08);--shadow-md:0 18px 50px -20px rgba(33,86,110,.35);
+  --shadow-lg:0 40px 80px -30px rgba(33,86,110,.45);--r:18px;--maxw:1180px;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spac
 .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--body);font-weight:700;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;will-change:transform}
 .btn svg{width:1.05em;height:1.05em}
 .btn-primary{background:var(--teal-deep);color:#fff;box-shadow:var(--shadow-sm)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#0a3c46}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);background:#173D4E}
 .btn-amber{background:var(--amber);color:var(--ink)}
 .btn-amber:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(224,160,88,.7);background:var(--amber-deep);color:#fff}
 .btn-ghost{background:transparent;color:var(--teal-deep);border-color:var(--line)}
@@ -65,7 +65,7 @@ nav.links a:hover::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:14px}
 .menu-btn{display:none;position:relative;background:none;border:0;cursor:pointer;color:var(--teal-deep);padding:8px}
 .menu-btn svg{width:28px;height:28px;transition:opacity .2s}
-.nav-overlay{position:fixed;inset:0;background:rgba(12,74,86,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
+.nav-overlay{position:fixed;inset:0;background:rgba(33,86,110,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;z-index:49}
 .nav-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
 body.menu-open{overflow:hidden}
 body.menu-open .menu-btn>svg{opacity:0}
@@ -241,7 +241,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
  footer.site .top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
- nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#0a3c46);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
+ nav.links{position:fixed;top:0;right:0;left:auto;width:min(320px,84vw);height:100vh;height:100dvh;background:linear-gradient(160deg,var(--teal-deep),#173D4E);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;padding:96px 28px;box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:60;overflow-y:auto}
  nav.links.open{transform:none}
  nav.links a{font-size:1.1rem;font-weight:700;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.14);color:#fff}
  nav.links a:hover{color:var(--amber)}
@@ -320,11 +320,11 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
     <div class="reveal">
       <p class="eyebrow">Why work with us</p>
       <h2 style="font-size:clamp(1.9rem,3.8vw,2.7rem);margin:.35em 0 1em">Supported, respected, set up to succeed</h2>
-      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Training and resources</h3><p>You get exceptional training, support, and the resources to deliver care you can be proud of.</p></div></div>
-      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible scheduling</h3><p>Full-time, part-time, and per-visit options that work around your life.</p></div></div>
-      <div class="val" style="border-color:rgba(12,74,86,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>Meaningful work</h3><p>Every visit helps someone stay safe, independent, and at home with dignity.</p></div></div>
+      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Training and resources</h3><p>You get exceptional training, support, and the resources to deliver care you can be proud of.</p></div></div>
+      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible scheduling</h3><p>Full-time, part-time, and per-visit options that work around your life.</p></div></div>
+      <div class="val" style="border-color:rgba(33,86,110,.18)"><span class="ic" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span><div><h3>Meaningful work</h3><p>Every visit helps someone stay safe, independent, and at home with dignity.</p></div></div>
     </div>
-    <div class="why-media reveal" data-delay="1"><svg viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A home health aide standing beside a senior"><defs><linearGradient id="sand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EC"/><stop offset="1" stop-color="#EFE6D5"/></linearGradient></defs><rect width="400" height="460" fill="url(#sand2)"/><circle cx="200" cy="170" r="140" fill="#15808F" opacity=".10"/><path d="M0 372 H400 V460 H0 Z" fill="#E4D7BF"/><ellipse cx="200" cy="374" rx="180" ry="22" fill="#0C4A56" opacity=".08"/><rect x="96" y="244" width="78" height="130" rx="32" fill="#C9863A"/><circle cx="135" cy="206" r="30" fill="#E8BE97"/><path d="M105 200 a30 30 0 0 1 60 0 q-7 -18 -30 -18 q-23 0 -30 18 Z" fill="#BFC8CD"/><path d="M122 210 q4 5 8 0 M140 210 q4 5 8 0" stroke="#7C5E48" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M127 222 q8 6 16 0" stroke="#A8744F" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="226" y="232" width="80" height="142" rx="34" fill="#15808F"/><path d="M226 286 q-22 -22 -50 -16" stroke="#15808F" stroke-width="22" fill="none" stroke-linecap="round"/><circle cx="178" cy="272" r="12" fill="#F0C9A8"/><circle cx="266" cy="196" r="31" fill="#F0C9A8"/><path d="M235 194 a31 31 0 0 1 62 0 q-6 -22 -31 -22 q-25 0 -31 22 Z" fill="#3C2D22"/><path d="M254 198 q4 5 8 0 M272 198 q4 5 8 0" stroke="#3C2D22" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M258 210 q8 6 16 0" stroke="#C98A6B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M212 120 c-9 -15 -33 -9 -33 9 c0 15 21 27 33 37 c12 -10 33 -22 33 -37 c0 -18 -24 -24 -33 -9 z" fill="#E0A458" opacity=".9"/></svg></div>
+    <div class="why-media reveal" data-delay="1"><svg viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A home health aide standing beside a senior"><defs><linearGradient id="sand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EC"/><stop offset="1" stop-color="#EFE6D5"/></linearGradient></defs><rect width="400" height="460" fill="url(#sand2)"/><circle cx="200" cy="170" r="140" fill="#2E86B8" opacity=".10"/><path d="M0 372 H400 V460 H0 Z" fill="#E4D7BF"/><ellipse cx="200" cy="374" rx="180" ry="22" fill="#21566E" opacity=".08"/><rect x="96" y="244" width="78" height="130" rx="32" fill="#C9863A"/><circle cx="135" cy="206" r="30" fill="#E8BE97"/><path d="M105 200 a30 30 0 0 1 60 0 q-7 -18 -30 -18 q-23 0 -30 18 Z" fill="#BFC8CD"/><path d="M122 210 q4 5 8 0 M140 210 q4 5 8 0" stroke="#7C5E48" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M127 222 q8 6 16 0" stroke="#A8744F" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="226" y="232" width="80" height="142" rx="34" fill="#2E86B8"/><path d="M226 286 q-22 -22 -50 -16" stroke="#2E86B8" stroke-width="22" fill="none" stroke-linecap="round"/><circle cx="178" cy="272" r="12" fill="#F0C9A8"/><circle cx="266" cy="196" r="31" fill="#F0C9A8"/><path d="M235 194 a31 31 0 0 1 62 0 q-6 -22 -31 -22 q-25 0 -31 22 Z" fill="#3C2D22"/><path d="M254 198 q4 5 8 0 M272 198 q4 5 8 0" stroke="#3C2D22" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M258 210 q8 6 16 0" stroke="#C98A6B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M212 120 c-9 -15 -33 -9 -33 9 c0 15 21 27 33 37 c12 -10 33 -22 33 -37 c0 -18 -24 -24 -33 -9 z" fill="#E0A458" opacity=".9"/></svg></div>
   </div>
 </section>
 
@@ -352,6 +352,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <div><h4>Reach Us</h4><ul><li><a href="tel:+12489969202">Phone: (248) 996-9202</a></li><li><a href="mailto:Intake@SpiritHomeHealthCare.com">Intake@SpiritHomeHealthCare.com</a></li><li>Fax referrals: (248) 996-9460</li><li><a href="https://maps.google.com/maps?q=17348+W.+12+Mile+Rd.+Southfield+MI+48076" target="_blank" rel="noopener">17348 W. 12 Mile Rd., Suite 106<br>Southfield, MI 48076</a></li><li>Mon&ndash;Fri: 9:00am &ndash; 5:00pm</li></ul></div>
     </div>
     <p class="notice"><strong>Notice of Nondiscrimination:</strong> Spirit Home Health Care complies with applicable federal civil rights laws and does not discriminate, exclude, or treat people differently on the basis of social status, political belief, race, color, religion, national origin, sex (including sexual orientation and gender identity), age, or disability with regard to admission, access to treatment, or employment.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;padding:30px 0 6px"><img src="assets/img/cert-medicare.png" alt="Medicare Certified" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-chap.png" alt="CHAP Accredited" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/><img src="assets/img/cert-cms.png" alt="CMS - Centers for Medicare &amp; Medicaid Services" style="height:52px;width:auto;background:#fff;border-radius:12px;padding:8px 14px"/></div>
     <div class="legal"><span>&copy; 2026 Spirit Home Health Care. All rights reserved.</span><span>Medicare Certified &middot; CHAP Accredited</span></div>
   </div>
 </footer>
