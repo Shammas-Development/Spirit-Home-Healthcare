@@ -121,9 +121,9 @@ section{padding:96px 0}
 .mission .who span{display:block;font-weight:600;color:var(--ink-soft);font-size:.92rem}
 .founders{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .founder{position:relative}
-.founder .pic{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:1/1.18;border:6px solid #fff;box-shadow:var(--shadow-md);background:linear-gradient(150deg,#2EA5D6,#40738C);display:grid;place-items:center}
-.founder .pic img{width:100%;height:100%;object-fit:cover;display:block}
-.founder .pic .ph{font-family:var(--display);font-weight:600;font-size:2.6rem;color:#fff;opacity:.85}
+.founder .pic{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:1/1.18;border:6px solid #fff;box-shadow:var(--shadow-md);background:linear-gradient(150deg,#2EA5D6,#40738C)}
+.founder .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;z-index:1}
+.founder .pic .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:2.6rem;color:#fff;opacity:.85}
 .founder .name{margin-top:14px;font-weight:800;color:var(--ink);font-size:1.02rem}
 .founder .role{font-weight:600;color:var(--teal);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
 .founder:nth-child(2){margin-top:34px}
@@ -315,12 +315,12 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
   <div class="wrap">
     <div class="founders reveal">
       <div class="founder">
-        <div class="pic"><span class="ph">NB</span><img src="assets/neil.jpg" alt="Neil Bahura, Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
+        <div class="pic"><span class="ph">NB</span><img src="assets/img/founder.jpeg" alt="Neil Bahura, Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
         <div class="role">Founder</div>
         <div class="name">Neil Bahura</div>
       </div>
       <div class="founder">
-        <div class="pic"><span class="ph">EA</span><img src="assets/eymen.jpg" alt="Eymen Allos, Co-Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
+        <div class="pic"><span class="ph">EA</span><img src="assets/img/cofounder.jpeg" alt="Eymen Allos, Co-Founder of Spirit Home Health Care" onerror="this.style.display='none'"/></div>
         <div class="role">Co-Founder</div>
         <div class="name">Eymen Allos</div>
       </div>
