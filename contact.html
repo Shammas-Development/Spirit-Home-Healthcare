@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact Us | Spirit Home Health Care</title>
 <meta name="description" content="Contact Spirit Home Health Care in Southfield, MI. Call 248-996-9202, email Intake@SpiritHomeHealthCare.com, or request a callback." />
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/img/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -319,7 +322,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <h3>Request a callback</h3>
       <p>Tell us a little about your situation and we will reach out, usually the same business day.</p>
       <!-- Web3Forms: paste your free access key from https://web3forms.com (delivers to Intake@SpiritHomeHealthCare.com) -->
-      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="access_key" value="dfdf167e-8b5e-4f86-a1c2-daa088de0001">
       <input type="hidden" name="subject" value="New callback request — Spirit Home Health Care website">
       <input type="hidden" name="from_name" value="Spirit Home Health Care Website">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -380,7 +383,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
     form.addEventListener('submit',async e=>{
       e.preventDefault();
       const key=(form.querySelector('[name=access_key]')||{}).value||'';
-      if(!key||key==='YOUR_WEB3FORMS_ACCESS_KEY'){note.style.color='#c0392b';note.textContent='Form not configured yet \u2014 add your Web3Forms access key.';return;}
+      if(!key||key==='dfdf167e-8b5e-4f86-a1c2-daa088de0001'){note.style.color='#c0392b';note.textContent='Form not configured yet \u2014 add your Web3Forms access key.';return;}
       const orig=btn.textContent;btn.disabled=true;btn.textContent='Sending\u2026';note.style.color='';note.textContent='';
       try{
         const data=Object.fromEntries(new FormData(form));
