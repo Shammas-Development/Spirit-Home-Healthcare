@@ -25,7 +25,10 @@
       "Bash(perl -0777 -i -pe 's/<img src=\"assets\\\\/img\\\\/banner-chap.png\" alt=\"CHAP Accredited — Seal of Accreditation\" style=\"height:96px;width:auto;display:block\"\\\\/>/<img src=\"assets\\\\/img\\\\/chap-seal.png\" alt=\"CHAP Accredited — Seal of Accreditation\" style=\"width:120px;height:120px;display:block\"\\\\/>/gi' *.html)",
       "Read(//Users/muhammadhassranaeem/Desktop/spiritHomeHealthcare/**)",
       "Bash(open /Users/muhammadhassannaeem/Desktop/spiritHomeHealthcare/index.html)",
-      "Bash(open /Users/muhammadhassannaeem/Desktop/spiritHomeHealthcare/about.html)"
+      "Bash(open /Users/muhammadhassannaeem/Desktop/spiritHomeHealthcare/about.html)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o shhc_now.html)"
     ]
   }
 }

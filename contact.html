@@ -315,16 +315,21 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
       <div class="line"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></span><div><div class="label">Leave a review</div><div class="val-txt"><a href="https://maps.app.goo.gl/78KayNpbwFcHHtH17" target="_blank" rel="noopener">Share your experience on Google</a></div></div></div>
     </div>
 
-    <div class="form reveal" data-delay="1">
+    <form class="form reveal" data-delay="1" id="callbackForm" action="https://api.web3forms.com/submit" method="POST">
       <h3>Request a callback</h3>
       <p>Tell us a little about your situation and we will reach out, usually the same business day.</p>
-      <div class="row2"><div class="field"><label for="fn">First name</label><input id="fn" type="text" placeholder="Jane"></div><div class="field"><label for="ln">Last name</label><input id="ln" type="text" placeholder="Doe"></div></div>
-      <div class="row2"><div class="field"><label for="ph">Phone</label><input id="ph" type="tel" placeholder="(248) 000-0000"></div><div class="field"><label for="rel">Inquiring as</label><select id="rel"><option>Family member</option><option>The patient</option><option>Physician or hospital</option><option>Case manager</option><option>Job seeker</option></select></div></div>
-      <div class="field"><label for="svc">Service of interest</label><select id="svc"><option>Not sure yet, please advise</option><option>Skilled Nursing</option><option>Home Health Aide</option><option>Physical Therapy</option><option>Occupational Therapy</option><option>Speech and Language Therapy</option><option>Medical Social Work</option><option>Translation Services</option></select></div>
-      <div class="field"><label for="msg">How can we help?</label><textarea id="msg" rows="3" placeholder="A few details about your loved one's needs"></textarea></div>
-      <button class="btn btn-amber" id="submitBtn" data-label="Request callback" type="button">Request callback</button>
-      <p class="note">This is a demo form. We never share your information.</p>
-    </div>
+      <!-- Web3Forms: paste your free access key from https://web3forms.com (delivers to Intake@SpiritHomeHealthCare.com) -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New callback request — Spirit Home Health Care website">
+      <input type="hidden" name="from_name" value="Spirit Home Health Care Website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row2"><div class="field"><label for="fn">First name</label><input id="fn" name="First name" type="text" placeholder="Jane" required></div><div class="field"><label for="ln">Last name</label><input id="ln" name="Last name" type="text" placeholder="Doe"></div></div>
+      <div class="row2"><div class="field"><label for="ph">Phone</label><input id="ph" name="Phone" type="tel" placeholder="(248) 000-0000" required></div><div class="field"><label for="em">Email <span style="font-weight:500;color:var(--ink-soft)">(optional)</span></label><input id="em" name="Email" type="email" placeholder="you@example.com"></div></div>
+      <div class="row2"><div class="field"><label for="rel">Inquiring as</label><select id="rel" name="Inquiring as"><option>Family member</option><option>The patient</option><option>Physician or hospital</option><option>Case manager</option><option>Job seeker</option></select></div><div class="field"><label for="svc">Service of interest</label><select id="svc" name="Service of interest"><option>Not sure yet, please advise</option><option>Skilled Nursing</option><option>Home Health Aide</option><option>Physical Therapy</option><option>Occupational Therapy</option><option>Speech and Language Therapy</option><option>Medical Social Work</option><option>Translation Services</option></select></div></div>
+      <div class="field"><label for="msg">How can we help?</label><textarea id="msg" name="Message" rows="3" placeholder="A few details about your loved one's needs"></textarea></div>
+      <button class="btn btn-amber" id="submitBtn" data-label="Request callback" type="submit">Request callback</button>
+      <p class="note" id="formNote" aria-live="polite">We usually respond the same business day. We never share your information.</p>
+    </form>
   </div>
 </section>
 
@@ -368,8 +373,24 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
   window.addEventListener('resize',()=>{if(window.innerWidth>900)setMenu(false);});
   const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const form=document.getElementById('callbackForm');
   const btn=document.getElementById('submitBtn');
-  btn&&btn.addEventListener('click',()=>{const f=document.getElementById('fn');const fn=f?f.value.trim():'';btn.textContent=fn?'Thanks, '+fn+", we'll be in touch \u2713":"Thanks, we'll be in touch \u2713";btn.style.background='var(--teal-deep)';btn.style.color='#fff';setTimeout(()=>{btn.textContent=btn.dataset.label||'Submit';btn.style.background='';btn.style.color='';},3200);});
+  const note=document.getElementById('formNote');
+  if(form){
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      const key=(form.querySelector('[name=access_key]')||{}).value||'';
+      if(!key||key==='YOUR_WEB3FORMS_ACCESS_KEY'){note.style.color='#c0392b';note.textContent='Form not configured yet \u2014 add your Web3Forms access key.';return;}
+      const orig=btn.textContent;btn.disabled=true;btn.textContent='Sending\u2026';note.style.color='';note.textContent='';
+      try{
+        const data=Object.fromEntries(new FormData(form));
+        const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+        const out=await res.json();
+        if(out.success){form.reset();btn.textContent='Sent \u2713';note.style.color='var(--teal)';note.textContent="Thank you \u2014 we'll be in touch, usually the same business day.";setTimeout(()=>{btn.disabled=false;btn.textContent=orig;},4000);}
+        else{throw new Error(out.message||'Error');}
+      }catch(err){btn.disabled=false;btn.textContent=orig;note.style.color='#c0392b';note.textContent='Sorry, something went wrong. Please call 248-996-9202.';}
+    });
+  }
 </script>
 
 <script type="text/javascript">

@@ -1,0 +1,23 @@
+SPIRIT HOME HEALTH CARE — FORM SETUP (one step)
+================================================
+
+The "Request a callback" form on contact.html is fully built and will email
+every submission to your intake inbox. It just needs one free access key.
+
+HOW TO ACTIVATE (2 minutes, free, no credit card):
+1. Go to https://web3forms.com
+2. Enter the delivery email:  Intake@SpiritHomeHealthCare.com
+3. Web3Forms emails you an "Access Key" (a long code).
+4. Open contact.html and find this line:
+       <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+   Replace  YOUR_WEB3FORMS_ACCESS_KEY  with the key they sent you.
+5. Save. Done — submissions now arrive at Intake@SpiritHomeHealthCare.com.
+
+NOTES
+- Works on any hosting (no server needed).
+- Spam protection (honeypot) is already built in.
+- The form shows a "Sent ✓" confirmation to the visitor on success.
+- The language translator (Select Language, top bar) activates automatically
+  once the site is hosted on a real https:// address.
+- Optional: in your Web3Forms dashboard you can turn on an auto-reply to the
+  visitor and add reCAPTCHA if you ever want stronger spam filtering.
