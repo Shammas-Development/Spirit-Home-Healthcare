@@ -383,7 +383,7 @@ footer.site .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap
     form.addEventListener('submit',async e=>{
       e.preventDefault();
       const key=(form.querySelector('[name=access_key]')||{}).value||'';
-      if(!key||key==='dfdf167e-8b5e-4f86-a1c2-daa088de0001'){note.style.color='#c0392b';note.textContent='Form not configured yet \u2014 add your Web3Forms access key.';return;}
+      if(!key||key==='YOUR_WEB3FORMS_ACCESS_KEY'){note.style.color='#c0392b';note.textContent='Form not configured yet \u2014 add your Web3Forms access key.';return;}
       const orig=btn.textContent;btn.disabled=true;btn.textContent='Sending\u2026';note.style.color='';note.textContent='';
       try{
         const data=Object.fromEntries(new FormData(form));
