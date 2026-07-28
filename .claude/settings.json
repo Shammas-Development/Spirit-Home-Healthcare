@@ -43,7 +43,8 @@
       "Bash(npx --no-install playwright --version)",
       "Bash(grep -oE \"form.addEventListener\\\\\\('submit'.{0,600}\" live_now.html)",
       "Bash(grep -oE \"access_key[^;]{0,120}\" live_now.html)",
-      "Bash(perl -0777 -ne \"print \\\\$1 if /\\(form\\\\.addEventListener\\\\\\('submit'.*?catch\\\\\\(err\\\\\\)\\\\{[^}]*\\\\}\\\\s*\\\\}\\\\s*\\\\\\)\\\\s*;\\)/s\" live_now.html)"
+      "Bash(perl -0777 -ne \"print \\\\$1 if /\\(form\\\\.addEventListener\\\\\\('submit'.*?catch\\\\\\(err\\\\\\)\\\\{[^}]*\\\\}\\\\s*\\\\}\\\\s*\\\\\\)\\\\s*;\\)/s\" live_now.html)",
+      "Bash(curl -s \"https://spirit-home-healthcare.vercel.app/index.html?cb=$\\(date +%s\\)\")"
     ]
   }
 }
