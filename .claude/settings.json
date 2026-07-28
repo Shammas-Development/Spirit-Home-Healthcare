@@ -28,7 +28,22 @@
       "Bash(open /Users/muhammadhassannaeem/Desktop/spiritHomeHealthcare/about.html)",
       "WebSearch",
       "WebFetch(domain:www.pexels.com)",
-      "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o shhc_now.html)"
+      "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o shhc_now.html)",
+      "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o shhc_social.html)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('URL:',d.get\\('html_url'\\)\\); print\\('Status:',d.get\\('status'\\)\\); print\\('Source:',d.get\\('source'\\)\\)\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"https://shammas-development.github.io/Spirit-Home-Healthcare/\")",
+      "Bash(curl -s \"https://spirit-home-healthcare.vercel.app/contact.html\" -o live_contact.html)",
+      "Bash(curl -s \"https://spirit-home-healthcare.vercel.app/index.html\" -o live_index.html)",
+      "Bash(curl -s -X POST https://api.web3forms.com/submit -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{ *)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -X POST https://api.web3forms.com/submit -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Origin: https://spirit-home-healthcare.vercel.app' -H 'Referer: https://spirit-home-healthcare.vercel.app/contact.html' -H 'User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36' -d '{ *)",
+      "Bash(curl -s -X POST https://api.web3forms.com/submit -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Origin: https://spirit-home-healthcare.vercel.app' -H 'Referer: https://spirit-home-healthcare.vercel.app/contact.html' -H 'User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36' -d '{\"access_key\":\"dfdf167e-8b5e-4f86-a1c2-daa088de0001\",\"subject\":\"TEST — website form delivery check \\(please ignore\\)\",\"from_name\":\"Spirit Website Form TEST\",\"First name\":\"TEST\",\"Last name\":\"Delivery Check\",\"Phone\":\"000-000-0000\",\"Email\":\"no-reply@shammasdevelopment.io\",\"Message\":\"Automated developer test to confirm the contact form delivers. Please ignore or delete.\"}' -w '\\\\n[HTTP %{http_code}]\\\\n')",
+      "Bash(node -e \"require\\('playwright'\\); console.log\\('playwright OK'\\)\")",
+      "Bash(node -e \"require\\('puppeteer'\\); console.log\\('puppeteer OK'\\)\")",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(grep -oE \"form.addEventListener\\\\\\('submit'.{0,600}\" live_now.html)",
+      "Bash(grep -oE \"access_key[^;]{0,120}\" live_now.html)",
+      "Bash(perl -0777 -ne \"print \\\\$1 if /\\(form\\\\.addEventListener\\\\\\('submit'.*?catch\\\\\\(err\\\\\\)\\\\{[^}]*\\\\}\\\\s*\\\\}\\\\s*\\\\\\)\\\\s*;\\)/s\" live_now.html)"
     ]
   }
 }
