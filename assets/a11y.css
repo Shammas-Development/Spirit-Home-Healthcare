@@ -1,0 +1,23 @@
+/* Spirit Home Health Care — Accessibility widget */
+.acc-btn{position:fixed;right:20px;bottom:20px;z-index:9998;width:56px;height:56px;border-radius:50%;background:#2EA5D6;border:none;color:#fff;box-shadow:0 8px 24px rgba(64,115,140,.45);cursor:pointer;display:grid;place-items:center;transition:transform .2s,background .2s}
+.acc-btn:hover,.acc-btn:focus-visible{transform:scale(1.06);background:#40738C}
+.acc-btn svg{width:30px;height:30px}
+.acc-panel{position:fixed;right:20px;bottom:88px;z-index:9998;width:300px;max-width:calc(100vw - 40px);background:#fff;border-radius:16px;box-shadow:0 20px 50px rgba(50,62,73,.3);border:1px solid rgba(64,115,140,.15);padding:18px;transform:translateY(12px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s;font-family:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.acc-panel.open{opacity:1;visibility:visible;transform:translateY(0)}
+.acc-panel h3{font-size:1rem;font-weight:800;color:#323E49;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.acc-panel h3 svg{width:20px;height:20px;color:#2EA5D6}
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.acc-opt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:74px;padding:10px 8px;border:1.5px solid rgba(64,115,140,.18);border-radius:12px;background:#fff;color:#323E49;font-size:.8rem;font-weight:700;cursor:pointer;text-align:center;transition:border-color .2s,background .2s,color .2s;font-family:inherit}
+.acc-opt:hover{border-color:#2EA5D6}
+.acc-opt.active{border-color:#2EA5D6;background:#EAF5FB;color:#2EA5D6}
+.acc-opt svg{width:22px;height:22px}
+.acc-reset{grid-column:1 / -1;margin-top:4px;padding:11px;border:none;border-radius:10px;background:#323E49;color:#fff;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit}
+.acc-reset:hover{background:#40738C}
+/* applied effects */
+html.acc-contrast{filter:contrast(1.18) saturate(1.28)}
+html.acc-links a{text-decoration:underline !important;text-underline-offset:2px;outline:2px solid #2EA5D6;outline-offset:1px;border-radius:2px}
+html.acc-readable body,html.acc-readable body *{font-family:Verdana,Tahoma,Arial,sans-serif !important;letter-spacing:.02em}
+html.acc-readable body{line-height:1.95 !important}
+html.acc-cursor,html.acc-cursor *{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42"><path d="M7 3l26 15-11 2 6 13-5 2-6-13-9 6z" fill="%23000" stroke="%23fff" stroke-width="1.6"/></svg>') 5 3, auto !important}
+@media(max-width:560px){.acc-btn{width:50px;height:50px;right:14px;bottom:14px}.acc-panel{right:14px;bottom:74px}}
+@media print{.acc-btn,.acc-panel{display:none !important}}
