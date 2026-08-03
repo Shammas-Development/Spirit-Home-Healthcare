@@ -46,7 +46,35 @@
       "Bash(perl -0777 -ne \"print \\\\$1 if /\\(form\\\\.addEventListener\\\\\\('submit'.*?catch\\\\\\(err\\\\\\)\\\\{[^}]*\\\\}\\\\s*\\\\}\\\\s*\\\\\\)\\\\s*;\\)/s\" live_now.html)",
       "Bash(curl -s \"https://spirit-home-healthcare.vercel.app/index.html?cb=$\\(date +%s\\)\")",
       "Bash(curl -s -L \"https://www.spirithomehealthcare.com/\" -o old.html)",
-      "Bash(node --check assets/a11y.js)"
+      "Bash(node --check assets/a11y.js)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1400,800 --virtual-time-budget=15000 --screenshot=/tmp/live_chat2.png https://spirit-home-healthcare.vercel.app/contact.html)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' 'https://embed.tawk.to/6a695127c89d501d46eddd26/1julma0j9')",
+      "Bash(echo \"tawk embed status: $\\(curl -s -o /dev/null -w '%{http_code}' 'https://embed.tawk.to/6a695127c89d501d46eddd26/1julma0j9'\\)\")",
+      "Bash(dig +short spirithomehealthcare.com A)",
+      "Bash(dig +short www.spirithomehealthcare.com A)",
+      "Bash(dig +short www.spirithomehealthcare.com CNAME)",
+      "Bash(dig +short spirithomehealthcare.com NS)",
+      "Bash(curl -s -o /dev/null -w \"vercel app HTTP %{http_code}\\\\n\" \"https://spirit-home-healthcare.vercel.app/\")",
+      "Bash(dig +short spirithomehealthcare.com MX)",
+      "Bash(dig +short spirithomehealthcare.com TXT)",
+      "Bash(rm -f /tmp/spirit-site.zip)",
+      "Bash(zip -r -q /tmp/spirit-site.zip . -x .git/* .claude/* *.DS_Store SETUP-FORMS.txt)",
+      "Bash(unzip -l /tmp/spirit-site.zip)",
+      "Bash(grep -E \"\\\\.\\(html|css|js|jpg|png|ico|txt\\)$\")",
+      "Bash(awk '{print $4}')",
+      "Bash(awk '{print $5}')",
+      "Bash(curl -s -I \"https://spirithomehealthcare.com/\")",
+      "Bash(curl -s -o /dev/null -w \"  /quick-links      -> HTTP %{http_code}\\\\n\" \"https://spirithomehealthcare.com/quick-links\")",
+      "Bash(curl -s -o /dev/null -w \"  /quick-links.html -> HTTP %{http_code}\\\\n\" \"https://spirithomehealthcare.com/quick-links.html\")",
+      "Bash(curl -s -o /dev/null -w \"  /services         -> HTTP %{http_code}\\\\n\" \"https://spirithomehealthcare.com/services\")",
+      "Bash(zip -r -q /tmp/spirit-site.zip . -x \".git/*\" \".claude/*\" \"*.DS_Store\" \"SETUP-FORMS.txt\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ],
+    "additionalDirectories": [
+      "/Users/muhammadhassannaeem/Desktop/spiritHomeHealthcare"
     ]
   }
 }
